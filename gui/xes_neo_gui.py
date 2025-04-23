@@ -1,8 +1,8 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
-Email       mburrill@hawk.iit.edu, andylau@u.boisestate.edu
+Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
 Version     0.2
-Date        Mar 15, 2024
+Date        4, 18, 2025
 """
 
 """
@@ -43,22 +43,6 @@ import xes_data as data
 import xes_analysis2
 from xes_neo.periodic_table import ElementData
 #from uncertainties import ufloat
-
-
-#-----------------TO DO LIST-----------------
-#
-# Fix Stop button in code --> This may be a Windows issue. Look into proc.kill
-#
-# Clean up code --> simplify to speed up algorithm
-#
-# Update DE to have the same mutation options as main --> Issue with verbose_type = dict
-#
-# Add C and D parameters to 3-Param Tougaard [CHECK] --> Should we do the same for 2 parameters? --> How to print out B1?
-
-
-
-
-
 
 
 
@@ -496,19 +480,25 @@ class App():
             element
         except NameError:
             print("Element Not Selected")
-            element = 'N/s'
+            element =[]
+            for i in range(int(self.number_of_peaks.get())):
+                element.append('N/s')
         
         try:
             photoelectronLine
         except NameError:
             print("Absorption Edge Not Selected")
-            photoelectronLine = 'N/s'
+            photoelectronLine = []
+            for i in range(int(self.number_of_peaks.get())):
+                photoelectronLine.append('N/s')
 
         try:
             transitionLine
         except NameError:
             #print("Absorption Edge Not Selected. Defaulting to K edge")
-            transitionLine = 'N/s'
+            transitionLine = []
+            for i in range(int(self.number_of_peaks.get())):
+                transitionLine.append('N/s')
         
        
      
