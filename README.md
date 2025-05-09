@@ -3,7 +3,7 @@
 #### Last update: April, 10, 2025 #Constant updates
 #### LANL O#: O4887
 
-This program utilize Genetic algorithm in fitting of XES data
+This program utilizes a genetic algorithm in fitting of XES data
 
 ## Pre-requisites
 Usage of this software is highly recommend to use `anaconda` or `pip` package managers.
