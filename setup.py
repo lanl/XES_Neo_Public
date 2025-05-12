@@ -34,6 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             'xes_neo = xes_neo.xes:main',
+            'xes_neo_gui = xes_neo.gui.xes_neo_gui:main',
         ]
     },
     license='GPLv3',
