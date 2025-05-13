@@ -6,9 +6,6 @@ from setuptools import setup, find_packages
 from xes_neo import __version__, __author__, __email__
 
 
-with open('requirements.txt') as f:
-    requirements = [l for l in f.read().splitlines() if l]
-
 
 def long_description():
     with codecs.open('README.md', 'rb') as readme:
@@ -26,11 +23,16 @@ setup(
     keywords=['GA', 'XES','analysis'],
     description='XES Analysis using GA',
     long_description=long_description(),
-    url='https://github.com/AlainaThompson/XES_Neo.git',
-    download_url='https://github.com/AlainaThompson/XES_Neo/tarball/master',
+    url='https://github.com/lanl/XES_Neo_Public.git',
+    download_url='https://github.com/lanl/XES_Neo_Public/tarball/main',
     include_package_data=True,
     zip_safe=False,
-    install_requires=requirements,
+    install_requires=[
+        'numpy',
+        'attrs',
+        'matplotlib',
+        'psutil'
+    ],
     entry_points={
         'console_scripts': [
             'xes_neo = xes_neo.xes:main',

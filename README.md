@@ -1,5 +1,5 @@
 # XES_Neo
-#### Versions: 0.0.4
+#### Versions: 0.0.7
 #### Last update: April, 10, 2025 #Constant updates
 #### LANL O#: O4887
 
@@ -21,7 +21,7 @@ It is highly recommend to create a new environment in `anaconda` to prevent pack
 ## Installations
 To install XES_Neo, simply clone the repo:
 
-        git clone https://github.com/AlainaThompson/XES_Neo.git #Change to ours
+        git clone https://github.com/lanl/XES_Neo_Public.git 
         cd xes
         pip install .
 

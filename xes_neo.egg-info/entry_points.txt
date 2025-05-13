@@ -1,4 +1,7 @@
 [console_scripts]
 xes_neo = xes_neo.xes:main
+<<<<<<< Updated upstream
 xes_neo_gui = xes_neo.gui.xes_neo_gui:main
 
+=======
+>>>>>>> Stashed changes

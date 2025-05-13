@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+LICENSE.md
+>>>>>>> Stashed changes
 README.md
 setup.py
 xes_neo/__init__.py
