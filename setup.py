@@ -3,7 +3,7 @@ from __future__ import print_function, unicode_literals
 import sys
 import codecs
 from setuptools import setup, find_packages
-from xes_neo import __version__, __author__, __email__
+from xes_neo._version import __version__, __author__, __email__
 
 
 
@@ -25,6 +25,7 @@ setup(
     long_description=long_description(),
     url='https://github.com/lanl/XES_Neo_Public.git',
     download_url='https://github.com/lanl/XES_Neo_Public/tarball/main',
+    package_data={"gui": ["media/*"]},
     include_package_data=True,
     zip_safe=False,
     install_requires=[
