@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.7
+Version     0.0.8
 Date        4, 18, 2025
 """
 
@@ -865,7 +865,7 @@ class App():
         else:
             name = self.generate_ini()
             self.stop_term()
-            command = 'python ../xes_neo/xes.py -i ' + f'"{name.absolute().as_posix()}"' #changing nano_indent.py to xes.py
+            command = 'python ../xes.py -i ' + f'"{name.absolute().as_posix()}"' #changing nano_indent.py to xes.py
             print(command)
             self.proc = subprocess.Popen(''.join(command), shell=True)
             self.proc_list.append(self.proc)
@@ -5233,7 +5233,7 @@ class App():
             fwhm_vals = []
 
             data = dict()
-            headers.append("Peak \#") #Error here for some reason. "invalid escape error"
+            headers.append("Peak \\#") #Error here for some reason. "invalid escape error"
             peak_range = len(self.params) - len(self.errors_bkgns) #To save first press "Plot Best Fit"
             for i in range(0, peak_range): #appending the values of each peak to each specified row in the table
 

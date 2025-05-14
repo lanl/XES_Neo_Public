@@ -1,5 +1,5 @@
 # XES_Neo
-#### Versions: 0.0.7
+#### Versions: 0.0.8
 #### Last update: April, 10, 2025 #Constant updates
 #### LANL O#: O4887
 
