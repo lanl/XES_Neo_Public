@@ -1,5 +1,5 @@
 # global os
-__version__ = '0.0.8'
+__version__ = '0.0.9'
 __author__ = 'Jeff Terry, Alaina Humiston, Miu Lun Lau, Min Long'
 __email__ = 'terryj@iit.edu, thompson9@hawk.iit.edu, andylau@u.boisestate.edu, minlong@boisestate.edu'
 

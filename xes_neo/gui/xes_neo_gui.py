@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.8
+Version     0.0.9
 Date        4, 18, 2025
 """
 
