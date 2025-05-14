@@ -2,13 +2,13 @@ import sys,glob,re,os
 from tokenize import String
 import numpy as np
 import fnmatch
-import xes_data
+import xes_neo.xes_data
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 from matplotlib.figure import Figure
 import copy
-from xes_individual import *
-from xes_fit import *
+from xes_neo.xes_individual import *
+from xes_neo.xes_fit import *
 import scipy as scipy
 
 """

@@ -4,7 +4,7 @@ import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 #import NanoIndent_Analysis
-import xes_analysis2
+import xes_neo.xes_analysis2
 
 class Analysis_plot:
     def __init__(self, frame, data_KE = False, data_XES = False):

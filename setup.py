@@ -25,7 +25,6 @@ setup(
     long_description=long_description(),
     url='https://github.com/lanl/XES_Neo_Public.git',
     download_url='https://github.com/lanl/XES_Neo_Public/tarball/main',
-    package_data={"gui": ["media/*"]},
     include_package_data=True,
     zip_safe=False,
     install_requires=[

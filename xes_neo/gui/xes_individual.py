@@ -6,7 +6,7 @@ File is a copy of xes_individual in the GA folder, but with some modifications t
 from tkinter import N
 
 from matplotlib.bezier import get_parallels
-from xes_fit import peak,background
+from xes_neo.xes_fit import peak,background
 
 class Individual():
     """

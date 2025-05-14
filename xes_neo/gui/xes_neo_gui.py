@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.9
+Version     0.0.10
 Date        4, 18, 2025
 """
 
@@ -37,10 +37,10 @@ import signal
 import pathlib
 import multiprocessing as mp
 # custom Libraries
-from xes_plot import Data_plot, Analysis_plot
+from xes_neo.xes_plot import Data_plot, Analysis_plot
 #import preprocess_data
-import xes_data as data
-import xes_analysis2
+import xes_neo.xes_data as data
+import xes_neo.xes_analysis2
 from xes_neo.periodic_table import ElementData
 #from uncertainties import ufloat
 
