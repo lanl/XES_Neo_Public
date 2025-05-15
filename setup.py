@@ -31,6 +31,7 @@ setup(
         'numpy',
         'attrs',
         'matplotlib',
+        'scipy',
         'psutil'
     ],
     entry_points={
