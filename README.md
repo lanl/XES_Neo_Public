@@ -1,5 +1,5 @@
 # XES_Neo
-#### Versions: 0.0.14
+#### Versions: 0.0.15
 #### Last update: April, 10, 2025 #Constant updates
 #### LANL O#: O4887
 
@@ -12,6 +12,7 @@ Usage of this software is highly recommend to use `anaconda` or `pip` package ma
   - Numpy: => 1.20
   - Scipy: => 1.6
   - Matplotlib: > 3.0
+  - Numba: => 0.6
 
 It is highly recommend to create a new environment in `anaconda` to prevent packages conflicts.
 
