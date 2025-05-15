@@ -1,6 +1,6 @@
 Metadata-Version: 0.1
 Name: exafs_neo
-Version: 0.0.15
+Version: 0.0.17
 Summary: xes_neo AI analysis using GA
 Home-page: https://github.com/lanl/XES_Neo_Public.git
 Download-URL: https://github.com/lanl/XES_Neo_Public/tarball/main
@@ -28,7 +28,7 @@ Dynamic: summary
 
 # XES Neo
 
-#### Versions: 0.0.15
+#### Versions: 0.0.17
 
 #### Last update: May 15, 2025
 
@@ -59,7 +59,7 @@ Notes: this step below is only needed if you are installing using source code
         # Create new anaconda environment
         conda create -y --name xes python=>3.9.10
         conda activate xes
-        conda install -y -c conda-forge "numpy>=1.23" "scipy>=1.8" "matplotlib>=3.6" "h5py>=3.5" "wxpython>=4.1" scikit-image scikit-learn pycifrw pandas jupyter plotly pyparsing pytest pytest-cov coverage
+        conda install -y -c conda-forge "numpy>=1.23" "scipy>=1.8" "matplotlib>=3.6" "numba>=0.60" "h5py>=3.5" "wxpython>=4.1" scikit-image scikit-learn pycifrw pandas jupyter plotly pyparsing pytest pytest-cov coverage
         pip install lmfit peakutils pyepics pyshortcuts termcolor sphinx dill pycifrw xraydb wxmplot wxutils fabio silx imageio charset-normalizer
 
 ## Installations
