@@ -1,0 +1,92 @@
+Metadata-Version: 0.1
+Name: exafs_neo
+Version: 0.0.14
+Summary: xes_neo AI analysis using GA
+Home-page: https://github.com/lanl/XES_Neo_Public.git
+Download-URL: https://github.com/lanl/XES_Neo_Public/tarball/main
+Author: Alaina Humiston, Miu Lun Lau, Evan Resuccia, Timothy Stack, Jeff Terry, Min Long
+Author-email: ahumiston@hawk.iit.edu, andylau@u.boisestate.edu, evan@restuccia.com, tstack@hawk.iit.edu, jterry98@iit.edu, minlong@boisestate.edu
+License: GPLv3
+Keywords: xes_neo,AI,analysis
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: attrs
+Requires-Dist: matplotlib
+Requires-Dist: psutil
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# XES Neo
+
+#### Versions: 0.0.14
+
+#### Last update: May 15, 2025
+
+
+XES Neo utilize Genetic algorithm in fitting X-ray Emission Spectroscopy.
+
+## Prerequisites
+
+It is highly recommend to utilize `anaconda` or `pip` package managers to prevent unforeseen dependency conflicts.
+
+- Python: => 3.9
+- Numpy: => 1.20
+- Scipy: => 1.6
+- Matplotlib: > 3.0
+
+It is highly recommend to create a new environment in `anaconda` to run XES Neo to prevent packages conflicts. For `Windows` operating system, if you encounter an issue requiring "Microsoft C++ 14.0 or greater is needed", please download the tools at the following location [`C++ Tools`](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and make sure to select C++ build tools during installation process.
+
+if you are on a Mac (either Intel or M1), you need to make sure that xcode command line tools is install, if not input this command into terminal:
+
+        xcode-select --install
+
+## Dependencies
+
+XES Neo requires the following dependencies to run:
+
+Notes: this step below is only needed if you are installing using source code
+
+        # Create new anaconda environment
+        conda create -y --name xes python=>3.9.10
+        conda activate xes
+        conda install -y -c conda-forge "numpy>=1.23" "scipy>=1.8" "matplotlib>=3.6" "h5py>=3.5" "wxpython>=4.1" scikit-image scikit-learn pycifrw pandas jupyter plotly pyparsing pytest pytest-cov coverage
+        pip install lmfit peakutils pyepics pyshortcuts termcolor sphinx dill pycifrw xraydb wxmplot wxutils fabio silx imageio charset-normalizer
+
+## Installations
+
+To install via PIP:
+
+        conda create --name "xes_neo" "python=3.12"
+        conda activate xes_neo
+        pip install xes_neo
+
+To install XES Neo, simply clone the repo:
+
+        git clone https://github.com/lanl/XES_Neo_Public.git
+        cd XES_Neo_Public/
+        pip install .
+
+
+## GUI
+
+We also have provided a GUI for use in additions to our program, with additional helper script to facilitate post-analysis. To use the GUI:
+
+        xes_neo_gui
+
+
+## Update
+
+XES Neo is under active development, to update the code after pulling from the repository:
+
+        git pull --rebase
+        python setup.py install

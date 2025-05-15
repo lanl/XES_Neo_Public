@@ -1,5 +1,5 @@
 # XES_Neo
-#### Versions: 0.0.12
+#### Versions: 0.0.14
 #### Last update: April, 10, 2025 #Constant updates
 #### LANL O#: O4887
 
@@ -8,9 +8,10 @@ This program utilizes a genetic algorithm in fitting of XES data
 ## Pre-requisites
 Usage of this software is highly recommend to use `anaconda` or `pip` package managers.
 
-  - Python: 3.8>
-  - Numpy
-  - Matplotlib
+  - Python: => 3.9
+  - Numpy: => 1.20
+  - Scipy: => 1.6
+  - Matplotlib: > 3.0
 
 It is highly recommend to create a new environment in `anaconda` to prevent packages conflicts.
 
