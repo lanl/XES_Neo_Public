@@ -12,7 +12,7 @@ Usage of this software is highly recommend to use `anaconda` or `pip` package ma
   - Numpy: => 1.20
   - Scipy: => 1.6
   - Matplotlib: > 3.0
-  - Numba: => 0.6
+  - Numba: => 0.60
 
 It is highly recommend to create a new environment in `anaconda` to prevent packages conflicts.
 

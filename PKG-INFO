@@ -43,7 +43,7 @@ It is highly recommend to utilize `anaconda` or `pip` package managers to preven
 - Numpy: => 1.20
 - Scipy: => 1.6
 - Matplotlib: > 3.0
-- Numba: => 0.6
+- Numba: => 0.60
 It is highly recommend to create a new environment in `anaconda` to run XES Neo to prevent packages conflicts. For `Windows` operating system, if you encounter an issue requiring "Microsoft C++ 14.0 or greater is needed", please download the tools at the following location [`C++ Tools`](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and make sure to select C++ build tools during installation process.
 
 if you are on a Mac (either Intel or M1), you need to make sure that xcode command line tools is install, if not input this command into terminal:

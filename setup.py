@@ -29,6 +29,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'numpy',
+        'numba',
         'attrs',
         'matplotlib',
         'scipy',
