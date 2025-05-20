@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.20
+Version     0.0.22
 Date        4, 18, 2025
 """
 
@@ -873,7 +873,7 @@ class App():
         else:
             name = self.generate_ini()
             self.stop_term()
-            command = 'python ../xes.py -i ' + f'"{name.absolute().as_posix()}"' #changing nano_indent.py to xes.py
+            command = 'xes_neo -i ' + f'"{name.absolute().as_posix()}"' #changing nano_indent.py to xes.py
             print(command)
             self.proc = subprocess.Popen(''.join(command), shell=True)
             self.proc_list.append(self.proc)

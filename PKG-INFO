@@ -1,6 +1,6 @@
 Metadata-Version: 0.1
 Name: exafs_neo
-Version: 0.0.20
+Version: 0.0.22
 Summary: xes_neo AI analysis using GA
 Home-page: https://github.com/lanl/XES_Neo_Public.git
 Download-URL: https://github.com/lanl/XES_Neo_Public/tarball/main
@@ -28,7 +28,7 @@ Dynamic: summary
 
 # XES Neo
 
-#### Versions: 0.0.20
+#### Versions: 0.0.22
 
 #### Last update: May 15, 2025
 
