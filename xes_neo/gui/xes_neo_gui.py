@@ -739,17 +739,17 @@ class App():
             # os.chdir(pathlib.Path.cwd().joinpath('gui'))
 
     def select_csv_folder(self):
-        initial_dir = os.getcwd()
-        os.chdir("..") #changed working directory from gui to xes_neo
+       
         #os.chdir(pathlib.Path.cwd().parent)
-        folder_name = pathlib.Path(filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder"))
+        #folder_name = pathlib.Path(filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder"))
+        folder_name = pathlib.Path(filedialog.askdirectory(initialdir=os.getcwd(), title="Choose a folder")) #path change
         self.csv_folder.set(folder_name)
         self.csv_folder_path = folder_name  # No file has been selected yet - this is the folder
         # This calls a method to create a dropdown menu next to generate ini button of the files in the directory
         self.file_dropdown()
         #os.chdir(pathlib.Path.cwd().joinpath('gui'))
         #os.chdir("gui")
-        os.chdir(initial_dir)  
+        
         return folder_name
 
     #def read_input(self, filename):
@@ -784,18 +784,17 @@ class App():
         """
         Select output folder
         """
-        initial_dir = os.getcwd()
-        os.chdir("..") #changed working directory from gui to xes_neo
- 
+       
         #os.chdir(pathlib.Path.cwd().parent)  # change the working directory from gui to nano-indent
-        folder_name = pathlib.Path(filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder"))
+        #folder_name = pathlib.Path(filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder"))
+        folder_name = pathlib.Path(filedialog.askdirectory(initialdir=os.getcwd(), title="Choose a folder")) #path change
         self.output_folder.set(folder_name)
         print("select output folder, folder.get ", self.output_folder.get())
         self.output_folder_path = pathlib.Path(folder_name)
         self.output_file = self.output_folder_path.joinpath('out.txt')
         #os.chdir(pathlib.Path.cwd().joinpath('gui'))
         #os.chdir("gui")
-        os.chdir(initial_dir)  
+       
         return folder_name
 
     def loop_direc_same_params(self):
@@ -989,18 +988,20 @@ class App():
 
         # functions for input data file
         def select_csv_file():
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
+            
             #os.chdir(pathlib.Path.cwd().parent)  # change the working directory from gui to nano-indent
-            file_name = filedialog.askopenfilename(initialdir=pathlib.Path.cwd(), title="Choose txt/csv",
+            #file_name = filedialog.askopenfilename(initialdir=pathlib.Path.cwd(), title="Choose txt/csv",
+            #                                       filetypes=(("txt files", "*.txt"), ("csv files", "*.csv"),
+            #                                                  ("all files", "*.*")))
+            file_name = filedialog.askopenfilename(initialdir=os.getcwd(), title="Choose txt/csv",
                                                    filetypes=(("txt files", "*.txt"), ("csv files", "*.csv"),
-                                                              ("all files", "*.*")))
+                                                              ("all files", "*.*"))) #path change
             if not file_name:
                 self.csv_file.set('Please select a file')
             else:
                 self.csv_folder.set("File is selected")
-                self.csv_file.set(pathlib.Path(file_name))
-                self.csv_generate_from = pathlib.Path(file_name)
+                self.csv_file.set(file_name)#.set(pathlib.Path(file_name)) #path change
+                self.csv_generate_from = pathlib.Path(file_name) #path change
                 self.file_name = file_name
                 # create the data objectives
 
@@ -1011,20 +1012,19 @@ class App():
                 self.file_menu.configure(state="disabled")
                 self.csv_folder.set("File selected")
             #os.chdir("gui")
-            os.chdir(initial_dir)  
+          
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
 
         def select_csv_folder():
             #os.chdir(pathlib.Path.cwd().parent)
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
-            initial_dir = pathlib.Path.cwd()
-            folder_name = filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder")
+          
+            #folder_name = filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder")
+            folder_name = filedialog.askdirectory(initialdir=os.getcwd(), title="Choose a folder") #path change
 
             if not folder_name:  # They did not select a folder
                 self.csv_folder.set("Please choose a folder")
             else:
-                folder_path = pathlib.Path(folder_name)
+                folder_path = folder_name #pathlib.Path(folder_name) #path change
                 self.csv_file.set("Folder is selected")
                 self.csv_folder.set(folder_path)
                 self.csv_folder_path = folder_path  # No file has been selected yet - this is the folder
@@ -1032,7 +1032,7 @@ class App():
                 self.file_dropdown()
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             #os.chdir("gui")
-            os.chdir(initial_dir)  
+          
 
         def get_fit_params():
             #Getting all the values from configuration settings file and updating them in the GUI for running a new fit using the same parameters
@@ -1195,9 +1195,7 @@ class App():
         multiple_input_button.grid(column=0, row=2, sticky=E)
 
         def select_files_to_average():
-            initial_dir = os.getcwd()
-            os.chdir("..") #change the working directory from gui to XES
-
+            
             all_files = filedialog.askopenfilenames(initialdir = os.getcwd(), title = "Choose txt/csv", filetypes = (("txt files", "*.txt"),("csv files","*.csv"),("all files","*.*")))
 
             if not all_files:
@@ -1211,12 +1209,10 @@ class App():
 
                 #print(self.all_files)
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
-            os.chdir(initial_dir)  
-
+          
 
         def select_file_to_save_averaged_data():
-            initial_dir = os.getcwd()
-            os.chdir("..")
+         
             averaged_file = filedialog.asksaveasfilename(initialdir = os.getcwd(), title = "Choose txt/csv", filetypes = (("txt files", "*.txt"),("csv files","*.csv"),("all files","*.*")))
 
             if not averaged_file:
@@ -1227,8 +1223,7 @@ class App():
                 # os.chdir("gui")
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             #os.chdir("gui")
-            os.chdir(initial_dir) 
-
+          
         def average_selected_data():
             #Finds lines to skip at top of data that are comments
             #lines_to_skip = 2
@@ -4821,11 +4816,11 @@ class App():
     def build_analysis_tab(self):
     
         def select_analysis_folder():
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
+           
             #os.chdir(pathlib.Path.cwd().parent)  # change the working directory from gui to nano-indent
 
-            self.folder_name = filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder")
+            #self.folder_name = filedialog.askdirectory(initialdir=pathlib.Path.cwd(), title="Choose a folder")
+            self.folder_name = filedialog.askdirectory(initialdir=os.getcwd(), title="Choose a folder")
             if not self.folder_name:
                 self.analysis_dir.set('Please choose a directory')
             else:
@@ -4834,7 +4829,7 @@ class App():
 
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             #os.chdir("gui")
-            os.chdir(initial_dir) 
+          
 
         def calculate_and_plot():
             #self.background_types = ['Shirley-Sherwood', 'Slope', 'Exponential', 'Baseline', 'Polynomial 1', 'Polynomial 2', 'Polynomial 3', '3-Param Tougaard', '2-Param Tougaard']
@@ -5011,12 +5006,10 @@ class App():
 
             XES_Oasis_out_name = self.csv_generate_from.stem + "_fit_Aanalyzer" + '.fil'
             #os.chdir(pathlib.Path.cwd().parent)
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
-            XES_Oasis_Fit_folder_path = pathlib.Path(self.folder_name)
+           
+            XES_Oasis_Fit_folder_path = pathlib.Path(self.folder_name) #path change
             XES_Oasis_Fit_file = XES_Oasis_Fit_folder_path.joinpath(XES_Oasis_out_name)
             #os.chdir("gui")
-            os.chdir(initial_dir) 
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             XES_Oasis_Fit_file = open(XES_Oasis_Fit_file, "w")
 
@@ -5039,14 +5032,13 @@ class App():
             #Changed output format to be similiar to Aanalyzer. Only have to output one file to enter into Igor pro to make graphs.
             peak_num = len(self.peak_y_vals)
             out_name = self.csv_generate_from.stem + "_Fit_Arrays" + '.txt'
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
+           
             #os.chdir(pathlib.Path.cwd().parent)
             peakFit_folder_path = pathlib.Path(self.folder_name)
             peakFit_file = peakFit_folder_path.joinpath(out_name)
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             #os.chdir("gui")
-            os.chdir(initial_dir) 
+         
             peakFit_file = open(peakFit_file, "w")
             peakFit_file.write(str("x"))
             peakFit_file.write(str("  "))
@@ -5454,8 +5446,7 @@ class App():
 
 
             out_name = self.csv_generate_from.stem + "_" + "LaTeX_Table" + '.txt'
-            initial_dir = os.getcwd()
-            os.chdir("..") #changed working directory from gui to xes_neo
+           
             #os.chdir(pathlib.Path.cwd().parent)  # change the working directory from gui to nano-indent
 
 
@@ -5463,7 +5454,7 @@ class App():
             table_file = table_folder_path.joinpath(out_name)
             #os.chdir(pathlib.Path.cwd().joinpath('gui'))
             #os.chdir("gui")
-            os.chdir(initial_dir) 
+           
 
             #name_of_file = str("Output_table")
 
