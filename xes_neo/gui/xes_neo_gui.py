@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.23
+Version     0.0.25
 Date        4, 18, 2025
 """
 
@@ -556,7 +556,9 @@ class App():
 
     
         peak_add_remove = self.data_peak_add
-       
+        if not self.background_types: #Must have a background selected or else error is thrown. 
+            self.background_types.append("Baseline")
+            print("No Background selected: Appending Baseline")
            #inputKE.append(self.data_KE[i].get())
         #print("PE UP", PE_up_lim, "PE LOW", PE_low_lim, "PE LIMIT", PE_limit, "PE CORR", PE_corr, )
         #print(amp_guesses_range)
