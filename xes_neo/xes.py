@@ -1118,6 +1118,7 @@ class XES_GA:
 
         
         with np.printoptions(precision=5, suppress=True):
+            np.set_printoptions(legacy='1.25')
             self.logger.info("Different from last best fit: " +str(self.bestDiff))
             self.logger.info("Number of Generations since improved: " + str(self.numGenSinceImproved))
             self.logger.info(bcolors.BOLD + "Best fit: " + bcolors.OKBLUE + str(self.currBestFit[1]) + bcolors.ENDC)

@@ -1,4 +1,4 @@
-FROM ahumiston/xes_neo:0.0.22
+FROM ahumiston/xes_neo:0.0.23
 
 ENV DISPLAY=host.docker.internal:0
 

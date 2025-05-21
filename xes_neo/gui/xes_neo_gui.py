@@ -1,7 +1,7 @@
 """
 Authors     Alana Humiston, Megan Burrill, Miu lun lau
 Email       athompson9@hawk.iit.edu, mburrill@hawk.iit.edu, andylau@u.boisestate.edu
-Version     0.0.22
+Version     0.0.23
 Date        4, 18, 2025
 """
 
@@ -43,7 +43,6 @@ import xes_neo.gui.xes_data as data
 import xes_neo.gui.xes_analysis2
 from xes_neo.periodic_table import ElementData
 #from uncertainties import ufloat
-
 
 
 class App():
@@ -4100,7 +4099,7 @@ class App():
                 self.background_types.append('Baseline')
                 self.baseline_selected = 2
 
-
+       
         defaultOn = IntVar(value=1)
         checkbutton_baseline = ttk.Checkbutton(self.fitting_param_tab,variable = defaultOn, text="Baseline", command=baseline_bkgn)
         checkbutton_baseline.grid(column=4, row=2, sticky=W)
@@ -4112,7 +4111,7 @@ class App():
             for i in self.background_types:
                 if i == 'Baseline':
                     self.baseline_selected = 2
-
+        
 
 
 
